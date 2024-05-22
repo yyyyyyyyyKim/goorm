@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+} /*전역 css*/
+
+body {
+    background-color: #111;
+}
+
+
+/* header */
+
+.navbar {
+    background-color: #111;
+    position: fixed; /*맨위에고정*/
+    top: 0; /*맨위에있어야하니까*/
+    width: 100%;
+    z-index: 1; /*다른요소들보다 앞에 나옴. static으로 하면 z-index가 안먹힘*/
+    display: flex; /*위에서 아래로 가는게 옆으로 나열되게 됨*/
+    justify-content: space-around; /*위치옮겨줌 tvshows랑 movies*/
+    align-items: center; /*수직으로도 맞게 이렇게 해줌*/
+    flex-wrap: wrap; /*화면이 작아졌을 때 내려오게하는 것, 기본은 nowrap임*/
+}
+
+.navbar ul {
+    display: flex; /*flex direction이 row가 기본(왼쪽에서오른쪽)*/
+    align-items: center;
+    flex-wrap: wrap; /*크기가 줄어들때 아래로가게됨(flex-wrap: nowrap; 하면한줄로계속됨)*/
+}
+
+.navbar li {
+    list-style: none; /*li(리스트아이템)태그에 앞에 생기는 점(마커) 없애주기*/
+    padding: 1rem; /*padding = 요소의 내부여백설정. 1rem = 상하좌우 모든 방향에 대해 1rem 크기의 내부여백 추가. rem 단위는 루트요소(HTML의 <html> 태그)의 폰트 크기에 상대적인 크기를 의미*/
+}
+
+.navbar li a { /*navbar li에 있는 글자 꾸미기*/
+    padding: 2px 2px; /* 위아래2px 좌우2px*/
+    text-decoration: none; /*a태그에 기본적으로 들어가있는 밑줄 제거*/
+    color: #fff;
+}
+
+.navbar li a:hover {
+    color: gray;
+}
+
+
+.logo {
+    height: 45px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100%;
+}
+
+/* banner */
+ /* .banner -> 이걸 banner selector라고함*/
+.banner {
+    background-image: url("main-img/main-img/banner.jpg");
+    background-size: cover; /*contain을하면 전체 div부분 컨테이너를 다 채우게 됨(작은이미지라면반복해서채우게됨).no-repaet하면 채우기는 하지만 반복은 안함(하나만들어있을수도).cover하면 늘려서 다 채우게 됨. % px 로도 사용가능(contain같은용도지만 이미지크기조절해서 반복)*/
+    background-position: center; /*백그라운드 이미지 배치,컨트롤*/
+    color: white;
+    height: 448px;
+}
+
+
+.banner_contents {
+    margin-left: 30px; /*왼쪽에 30px 여백주는거*/
+    padding-top: 190px; /*위에서 190px 띄워주는거*/
+    height: 190px;
+}
+
+.banner_title {
+    font-size: 3rem;
+    font-weight: 800; /*폰트굵기*/
+    padding-bottom: 0.3rem; /*아래에서살짝띄워주기*/
+}
+
+.banner_btn {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.banner_btn button {
+    width: 60px;
+    height: 30px;
+    color: black;
+    border-radius: 2px;
+    border: 1px solid transparent; /*테두리 굵기(1px)/스타일(실선)/색상(transparent=투명(테두리안보임)) */
+}
+
+.banner_btn button:hover {
+    background-color: rgb(171, 163, 163);
+    cursor: pointer; /*재생버튼에 호버하면 마우스 모양나오게함*/
+}
+
+.banner_description {
+    line-height: 1.5; /*라인간격띄워주기*/
+    padding-top: 0.5rem;
+    font-size: 1rem;
+}
+
+
+/* row */
+.row {
+    color: white;
+}
+
+.row h2 {
+    color: white;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+.row_posters {
+    display: flex; /*위에서 아래로 말고, 왼쪽에서 오른쪽으로 메인축 변경*/
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+
+.row_poster {
+    width: 100%;
+    object-fit: contain;
+    max-height: 100px;
+    margin-right: 10px;
+    transition: transform 450ms; /*아래 transform이 일어날때 얼마동안 일어날지 시간 설정*/
+}
+
+.row_poster:hover {
+    transform: scale(1.1); /*scale함수사용해 호버했을때 크기 키워주기(1.1로하면 10%커지게됨)*/
+}
+
+.row_posters::-webkit-scrollbar { /*포스터아래 스크롤바안보이게 설정*/
+    display: none;
+}
+
+.row_posterLarge { /*여러클래스에서 같은 속성이 중복 정의될 경우, 덮어쓰면서 CSS파일or스타일섹션내에서 마지막에 위치한 클래스의 해당속성적용됨*/
+    max-height: 250px;
+}

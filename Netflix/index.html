@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETFLIX</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body> <!--헤더/메인(배너/넷플릭스오리지널(row)/트렌딩나우(row)/탑(row)/푸터-->
+    <!-- header -->
+    <header> <!--div라고 해도 되지만 좀 더 명확하게 알기위해 header사용-->
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/"> <!--href 경로--> <!--alt=이미지가없을때뜨는거 / src=이미지경로-->
+                    <img 
+                    id="logo"
+                    alt="netflix logo"  
+                    src="main-img/main-img/netflixlogo-removebg-preview.png">
+                </a>
+            </div>
+            <ul>
+                <li><a href="#">TV SHOWs</a></li> <!--경로가딱히없을때는 href에 # 써줌-->
+                <li><a href="#">Movies</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main> <!--배너같은거넣을거-->
+        <!-- banner -->
+        <div class="banner"> <!--class를줘서 index.css에서 스타일링작성하게함-->
+            <div class="banner_contents">
+                <h1 class="banner_title">종이의 집</h1>
+                <div class="banner_btn">
+                    <button>
+                        재생
+                    </button>
+                </div>
+                <p class="banner_description"> <!--단락태그 p-->
+                    종이가 어쩌고 하기 위해
+                    <br> <!--한 줄 띄워주기-->
+                    교수라는 의문의 인간이 저쩌고 하는데...
+                </p>
+
+            </div>
+        </div>
+
+        <!-- NETFLIX ORIGINAL -->
+        <div class="row">
+            <h2>NETFLIX ORIGINALS</h2>
+            <div class="row_posters">
+                <img 
+                    src="./main-img/main-img/large-movie1.jpg" 
+                    alt="movie"
+                    class="row_poster row_posterLarge"> <!--두개의클래스(row_poster랑row_posterLarge)-->
+                <img 
+                    src="./main-img/main-img/large-movie2.jpg" 
+                    alt="movie"
+                    class="row_poster row_posterLarge">
+                    
+                <img 
+                    src="./main-img/main-img/large-movie3.jpg" 
+                    alt="movie"
+                    class="row_poster row_posterLarge">
+                
+                <img 
+                    src="./main-img/main-img/large-movie4.jpg" 
+                    alt="movie"
+                    class="row_poster row_posterLarge">
+                    
+                <img 
+                    src="./main-img/main-img/large-movie5.jpg" 
+                    alt="movie"
+                    class="row_poster row_posterLarge">
+                
+                <img 
+                    src="./main-img/main-img/large-movie6.jpg" 
+                    alt="movie"
+                    class="row_poster row_posterLarge">
+                    
+                <img 
+                    src="./main-img/main-img/large-movie7.jpg" 
+                    alt="movie"
+                    class="row_poster row_posterLarge"> 
+                <img 
+                    src="./main-img/main-img/large-movie1.jpg" 
+                    alt="movie"
+                    class="row_poster row_posterLarge">
+                <img 
+                    src="./main-img/main-img/large-movie2.jpg" 
+                    alt="movie"
+                    class="row_poster row_posterLarge">
+                
+                <img 
+                    src="./main-img/main-img/large-movie3.jpg" 
+                    alt="movie"
+                    class="row_poster row_posterLarge">
+            
+                <img 
+                    src="./main-img/main-img/large-movie4.jpg" 
+                    alt="movie"
+                    class="row_poster row_posterLarge">
+                
+                <img 
+                    src="./main-img/main-img/large-movie5.jpg" 
+                    alt="movie"
+                    class="row_poster row_posterLarge">
+            
+                <img 
+                    src="./main-img/main-img/large-movie6.jpg" 
+                    alt="movie"
+                    class="row_poster row_posterLarge">
+                
+                <img 
+                    src="./main-img/main-img/large-movie7.jpg" 
+                    alt="movie"
+                    class="row_poster row_posterLarge">
+            </div>
+        </div>
+
+        <!-- TRENDING NOW --> <!--위에는 이미지에 두개의 클래스, 여기는 하나의 클래스 row_poster-->
+        <div class="row">
+            <h2>TRENDING NOW</h2>
+            <div class="row_posters"> 
+                <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+                <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+                <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+                <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+                <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+                <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+                <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+                <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+                <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+                <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+                <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+                <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+                <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+            </div>
+
+        </div>
+
+        <!-- TOP RATED -->
+        <div class="row">
+            <h2>TOP RATED</h2>
+            <div class="row_posters">
+            <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+            <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+            <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+            <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+            <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+            <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+            <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+            <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+            <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+            <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+            <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+            <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+            <img src="main-img/main-img/movie-1.jpeg" alt="" class="row_poster">
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <p>Copyright</p>
+    </footer>
+    
+</body>
+</html>
