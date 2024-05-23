@@ -1,0 +1,79 @@
+html{ /*html만 잡아/ *은 전체태그를 말하는 거*/
+    background-image: url(image/bg.jpg) ; /*모눈이미지*/
+    background-size: cover; /* 백그라운드 전체에 들어오게 cover*/
+    background-repeat: no-repeat ; /*이거 안하면 아래에 하나 더 생김, 계속생김. 왜때문.*/
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 30px auto;
+}
+#header h1{
+    background-color: white;
+    padding: 5px 10px;
+    font-size: 30px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+button{ /*모든버튼*/
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+.newTodo{ 
+    background-color: white;
+    padding: 5px 10px;
+}
+
+main{
+    width: 80%;
+    margin: 0 auto;
+}
+.todo-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.todo-list.complete .left input[type="text"] {
+    text-decoration: line-through 3px solid powderblue;
+}
+.left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: calc(100% - 100px); /*calc(100% 연산자+-% px,%) / 100px은 옆에 여백부분 + right부분 */
+}
+
+.left input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    accent-color: black; /*체크박스 선택시 색깔*/
+}
+.left input[type="text"]{
+    width: 100%;
+    height: 25px;
+    border: 0;
+    border-bottom: 3px solid transparent; /*focus 됐을 때 덜컹거림 방지*/
+}
+.left input[type="text"]:focus{ /*text박스에 입력할 때 박스생기는 거 없애고 아래 밑줄*/
+    outline: none;
+    border-bottom: 3px solid powderblue;
+}
+.left input[type="text"]:disabled{ /*input에 disabled 속성이 추가됐을 때 배경색 투명하게 (기본은 옅은 회색)*/
+    background-color: transparent;
+}
+.right button{ /*오른쪽 버튼들 크기조정, 왜때문인지 font-size로 해야 조정됨*/
+    font-size: 18px;
+    }
+
+.remove{ /*삭제버튼이랑 수정버튼 사이 공간 만들기*/
+    margin-left: 12px;
+}
+
+
