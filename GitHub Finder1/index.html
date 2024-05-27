@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Finder1</title>
+    <!-- 부트스트랩 이용 -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+</head>
+<body>
+    
+     <!--Bootstrap 프레임워크를 사용하는 웹 페이지에서 네비게이션 바를 설정하기 위한 코드, 부트스트랩에서 제공하는 스타일 적용, margin bottom 3-->
+     <nav class="navbar navbar-dark bg-primary mb-3"> 
+        <div class="container">
+            <a href="#" class="navbar-brand">GitHub Finder</a>
+        </div>
+    </nav>
+
+    <div class="container searchContainer"> 
+        <div class="search card card-body">
+          <h1>Search GitHub Users</h1>
+          <p class="lead">Enter a username to fetch a user profile and repos</p>
+          <input type="text" id="searchUser" class="form-control" placeholder="GitHub Username...">
+        </div>
+        <br> <!--한칸띄고-->
+        <div id="profile">
+
+        </div>     
+    </div>
+
+    <footer class="mt-5 p-3 text-center bg-light"> <!--footer스타일링-->
+        GitHub Finder1 &copy;
+    </footer>
+
+
+    <!-- 스타일링 편하게 하기 위해 추가한거 -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    
+    <!-- 순서중요! -->
+    <script src="github.js"></script>   <!--github에서 데이터를 주고받는 역할-->
+    <script src="ui.js"></script>   <!--화면에서 보여져야 되는 로직 처리하는 역할-->
+    <script src="app.js"></script>  <!--전체적인거/위에서 만든 메소드 가져와서 사용하는 역할-->
+</body>
+</html>
