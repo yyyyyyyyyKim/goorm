@@ -1,0 +1,40 @@
+#exp-btn {
+    background: #04AB46;
+    color: white;
+    border: none;
+    padding: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.cell-row {
+    display: flex;
+}
+
+.cell {
+    width: 80px;
+    border: 1px solid lightgray;
+    height: 40px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.cell.header { /*script.js에 66째줄에 헤당하는 거*/
+    text-align: center;
+    background: #ddd;
+}
+
+.cell.header.active { /*클릭시 하이라이트 주는거 script.js에 94.95번째줄*/
+    background: lightblue;
+    color: white;
+}
+
+#footer {
+    text-align: center;
+    /* position: fixed; */
+    position: relative;
+    margin: 10px;
+    width: 100%;
+    clear: both;
+}
