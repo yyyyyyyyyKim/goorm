@@ -1,0 +1,19 @@
+
+.main-container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  background: none;
+  outline: none;
+}
+
+button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
